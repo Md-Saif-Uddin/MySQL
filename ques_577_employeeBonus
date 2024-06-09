@@ -1,0 +1,8 @@
+/*    https://leetcode.com/problems/employee-bonus/description/?envType=study-plan-v2&envId=top-sql-50    */
+
+
+
+select emp.name, b.bonus
+from Employee as emp
+left join Bonus as b on emp.empid = b.empid
+where b.bonus < 1000 or b.bonus is null;
